@@ -1,41 +1,92 @@
-<div ng-cloak>
-    <div class="row">
-        <div class="col-md-4">
-            <span class="hipster img-responsive img-rounded"></span>
-        </div>
-        <div class="col-md-8">
-            <h1>Welcome, Java Hipster!</h1>
-            <p class="lead">This is your homepage</p>
-
-            <div ng-switch="vm.isAuthenticated()">
-                <div class="alert alert-success" ng-switch-when="true">
-                    You are logged in as user "{{vm.account.login}}".
-                </div>
-
-                <div class="alert alert-warning" ng-switch-when="false">
-                    If you want to <a class="alert-link" href="" ng-click="vm.login()">sign in</a>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
-                </div>
-
-                <div class="alert alert-warning" ng-switch-when="false">
-                    You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
+<!--<head>-->
+<!--<title>Bikers</title>-->
+<!--<meta charset=iso-8859-1"/>-->
+<!--<link href="../../content/templates/css/style.css" rel="stylesheet" type="text/css"/>-->
+<!--</head>-->
+<body>
+<div class="page">
+    <h2 style="text-align: center">Witamy w osiedlowych klubie rowerowym "Rowerem przez świat"!</h2>
+    <div style="height: 305px;">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                    <!--<h4>Slide {{slide.id}}</h4>-->
+                    <p>{{slide.text}}</p>
                 </div>
             </div>
-
-            <p>
-                If you have any question on JHipster:
-            </p>
-
-            <ul>
-                <li><a href="http://www.jhipster.tech/" target="_blank" rel="noopener">JHipster homepage</a></li>
-                <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener">JHipster on Stack Overflow</a></li>
-                <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener">JHipster bug tracker</a></li>
-                <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener">JHipster public chat room</a></li>
-                <li><a href="https://twitter.com/java_hipster" target="_blank" rel="noopener">follow @java_hipster on Twitter</a></li>
-            </ul>
-
-            <p>
-             <span>If you like JHipster, don't forget to give us a star on </span>&nbsp;<a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener">GitHub</a>!
-            </p>
         </div>
     </div>
+    <div class="events"> <!-- start of featured -->
+        <p>
+            Nasz Klub jest organizacją pozarządową prowadzącą działalność na rzecz ogółu społeczności. Jest
+            dobrowolnym,
+            samorządnym i trwałym zrzeszeniem członków, mającym na celu rozwijanie i propagowanie inicjatyw, postaw
+            i
+            działań sprzyjających wszelkich formom czynnego wypoczynku - w szczególności turystyce rowerowej.
+        </p>
+        <p>
+            Nasze stowarzyszeni zostało założone 18 grudnia 2007 roku i zarejestrowane w KRS w dniu 25 lutego 2008
+            roku
+            pod numerem 000000000. Klub posiada obecnie 39 członków oraz grupę ok. 50 sympatyków - mieszkańców Opola
+            -
+            którzy stale uczestniczą w naszych wycieczkach i imprezach.
+
+            Klub organizuje wycieczki dla mieszkańców Opola pod hasłem „Poznajemy okolice Opola” oraz wycieczki pn.
+            „Rowerem po zdrowie”.
+        </p>
+        <!--</div> &lt;!&ndash; end of featured &ndash;&gt;-->
+        <!--<div class="section">-->
+        <div class="events">
+            <h3>Wydarzenia</h3>
+            <p>Co tydzień w soboty i niedziele organizujemy wycieczki. Jesteśmy podzieleni na grupy - o 9 ( trasa około
+                60-100 km ) i o 10 ( trasa około 40-80 km ). Zapraszamy na plac Mickiewicza. Jeżdzimy również w zimie,
+                często w okresie grudzień - marzec o godzinie 10. Szczegółowe informacje o zimowych godzinach wycieczek
+                w aktualnościach na stronie.</p>
+            <p>
+                Masz ochotę dołączyć? Skontaktuj się z nami poprzez formularz. Uzyskasz w ten sposób do zawartości tylko
+                dla zarejestrowanych użytkowników.
+                Będziesz miał pogląda kalendarza naszym wydarzeń oraz możliwość dołączenia!
+                <br>
+                <strong>Zapraszamy!</strong>
+            </p>
+        </div>
+    </div> <!-- end of gallery and article section -->
+    <!--<div>-->
+    <!--<div ui-calendar="uiConfig.calendar" ng-model="vm.eventSources" calendar="myCalendar">-->
+    <!--</div>-->
+    <!--Tutaj powinny być dane-->
+    <!--{{vm.eventSources}}-->
+    <!--</div>-->
 </div>
+<div class="sidebar">  <!-- start of sidebar -->
+    <ul>
+        <li>
+            <h3>Jak to się zaczęło?</h3>
+            <p>A wszystko zaczęło się w roku 2004, kiedy Grzegorz Res postanowił zrealizować swoje marzenie o powołaniu
+                do życia w Opolu klubu rowerowego "z prawdziwego zdarzenia".</p>
+            <a href="../../content/bikersclubtemplate/about.html" style="margin-left: 200px">Czytaj więcej</a>
+        </li>
+        <li>
+            <h3>Zainteresowani</h3>
+            <p>Wszystkich zainteresowanym zapraszamy do odwiedzenia strony "O nas". Znajduje się tam wiele ciekawym
+                informacji dotyczących naszego klubu.</p>
+            <a href="../../content/bikersclubtemplate/about.html" style="margin-left: 200px">Czytaj więcej</a>
+        </li>
+    </ul>
+</div>  <!-- end of sidebar -->
+<section class="row">
+    <div class="col-md-12">
+        <div ng-switch="vm.isAuthenticated()">
+            <div class="alert alert-warning" ng-switch-when="false">
+                Jesteś już z nami? <a class="alert-link" href="" ng-click="vm.login()">Zaloguj się!</a>
+            </div>
+
+            <div class="alert alert-warning" ng-switch-when="false">
+                Nie masz jeszcze konta? <a class="alert-link" ui-sref="register">Zarejestruj się tutaj!</a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>  <!-- end of body wrapper -->
+

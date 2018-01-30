@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Advertisement</span> {{vm.advertisement.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Title</span></dt>
+        <dd>
+            <span>{{vm.advertisement.title}}</span>
+        </dd>
+        <dt><span>Body Of Advert</span></dt>
+        <dd>
+            <span>{{vm.advertisement.bodyOfAdvert}}</span>
+        </dd>
+        <dt><span>Post Date</span></dt>
+        <dd>
+            <span>{{vm.advertisement.postDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>User</span></dt>
+        <dd>
+            {{vm.advertisement.user.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="advertisement-detail.edit({id:vm.advertisement.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

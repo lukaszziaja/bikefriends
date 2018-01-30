@@ -53,8 +53,8 @@ spring:
 
         # see https://developers.facebook.com/docs/facebook-login/v2.2
         facebook:
-            client-id: xxx
-            client-secret: xxx
+            app-id: 1352078941564297
+            app-secret: a9fbf0e190734818b56c1f5d5a36641a
 
         # see https://apps.twitter.com/app/
         twitter:
