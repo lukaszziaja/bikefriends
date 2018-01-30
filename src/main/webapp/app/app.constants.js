@@ -5,6 +5,6 @@
         .module('bikefriendsApp')
         .constant('VERSION', "0.0.1-SNAPSHOT")
         .constant('DEBUG_INFO_ENABLED', false)
-        .constant('BUILD_TIMESTAMP', 1517336968221)
+        .constant('BUILD_TIMESTAMP', 1517338502807)
 ;
 })();
